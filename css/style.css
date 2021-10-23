@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&family=Nunito:wght@200;300;400;600;700&display=swap");
+:root {
+  --black: #414141;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Exo 2", sans-serif;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+body {
+  overflow-x: hidden;
+}
+html {
+  font-size: 62.5%;
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+  background: url(../images/background.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 0 10rem;
+}
+.container header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+.container header .logo img {
+  height: 5rem;
+}
+.container header nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.container header nav ul li {
+  margin-right: 2rem;
+}
+
+.container header nav ul li a {
+  color: var(--black);
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 0.5rem 2.5rem;
+  border-radius: 5rem;
+}
+.container header nav ul li .active,
+.container header nav ul li a:hover {
+  background-color: var(--black);
+  color: #fff;
+  box-shadow: 0.1rem 0.1rem 0.3rem #333;
+}
+.container .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  margin-top: -10rem;
+}
+.container .wrapper .content {
+  position: relative;
+}
+.container .wrapper .content h1 {
+  font-size: 4rem;
+  font-weight: normal;
+  text-shadow: 0.1rem 0.1rem 0.3rem #000;
+  color: #333;
+}
+.container .wrapper .content h3 {
+  font-size: 2rem;
+  color: #333;
+  margin: 1rem 0;
+}
+.container .wrapper .content ul li {
+  font-size: 1.7rem;
+  margin-left: 2rem;
+}
+.container .wrapper .content .price {
+  font-size: 3rem;
+  margin: 1.8rem 0;
+  color: var(--black);
+  display: block;
+  position: relative;
+}
+.container .wrapper .content .price::after {
+  content: attr(data-text);
+  color: #ff3300;
+  font-size: 1.5rem;
+  text-decoration: line-through;
+  position: absolute;
+  top: 0;
+  left: 15rem;
+}
+.container .wrapper .content .buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 35rem;
+}
+.container .wrapper .content .buttons button {
+  outline: none;
+  border: none;
+  border-radius: 5rem;
+  background: var(--black);
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  height: 4rem;
+  width: 16rem;
+  box-shadow: 0.1rem 0.1rem 0.3rem #fff;
+}
+.container .wrapper .content .buttons button:hover {
+  background: #fff;
+  color: #333;
+}
+.container .wrapper .content .icons {
+  position: absolute;
+  bottom: -50%;
+}
+.container .wrapper .content .icons a {
+  text-decoration: none;
+  font-size: 3rem;
+  color: var(--black);
+  margin: 0 1rem;
+  text-shadow: 0.1rem 0.1rem 0.3rem #333;
+}
+.container .wrapper .content .icons a:hover {
+  color: #fff;
+}
+.container .wrapper .image-container {
+  position: relative;
+  height: 50rem;
+  width: 50vw;
+}
+.container .wrapper .image-container .images img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: drop-shadow(0.2rem 0.2rem 0.3rem var(--black));
+  display: none;
+  width: 40rem;
+}
+.container .wrapper .image-container .images .active {
+  display: block;
+  animation: fadeIN 0.4s linear 1;
+}
+@keyframes fadeIN {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg);
+  }
+}
+.container .wrapper .image-container .controls {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -5rem;
+}
+#left,
+#right {
+  color: var(--black);
+  cursor: pointer;
+  font-size: 4rem;
+  margin: 0 4rem;
+  text-shadow: 0.1rem 0.1rem 0.3rem #333;
+}
+#left:hover,
+#right:hover {
+  color: #fff;
+}
